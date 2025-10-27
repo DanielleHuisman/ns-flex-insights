@@ -5,11 +5,12 @@ import eslintImport from 'eslint-plugin-import';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import {defineConfig} from 'eslint/config';
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
+export default defineConfig(
     {
-        ignores: ['.react-router/', 'app/api/client', 'build/', 'coverage/']
+        ignores: ['.next/', 'app/api/client', 'build/', 'coverage/']
     },
 
     // ESLint
@@ -58,6 +59,12 @@ export default tseslint.config(
             ]
         }
     },
+    {
+        files: ['next-env.d.ts'],
+        rules: {
+            '@typescript-eslint/triple-slash-reference': 'off'
+        }
+    },
 
     // Import
     eslintImport.flatConfigs.recommended,
@@ -98,12 +105,7 @@ export default tseslint.config(
     },
 
     // React Hooks
-    {
-        plugins: {
-            'react-hooks': reactHooks
-        },
-        rules: reactHooks.configs.recommended.rules
-    },
+    reactHooks.configs.flat.recommended,
 
     // JSX Accessibility
     jsxA11y.flatConfigs.recommended,
