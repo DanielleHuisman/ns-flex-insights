@@ -6,6 +6,9 @@
 # Testing
 /coverage
 
+# Database
+/generated/
+
 # Next.js
 /.next/
 /out/
