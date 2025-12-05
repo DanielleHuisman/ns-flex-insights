@@ -1,4 +1,3 @@
-import {ClassType} from '@prisma/client';
 import {TRPCError} from '@trpc/server';
 import {DateTime} from 'luxon';
 import {z} from 'zod';
@@ -6,6 +5,7 @@ import {z} from 'zod';
 import {getPrice} from '~/ns/api';
 import {createTRPCRouter, publicProcedure} from '~/server/api/trpc';
 import {prisma} from '~/server/prisma';
+import {ClassType} from '~generated/prisma/client';
 
 const getJourneyInput = z.object({
     origin: z.string(),
