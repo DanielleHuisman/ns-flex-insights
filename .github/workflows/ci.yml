@@ -25,7 +25,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v6
             - name: Sanitize repository slug
-              uses: actions/github-script@v8
+              uses: actions/github-script@v9
               id: repository_slug
               with:
                   result-encoding: string
