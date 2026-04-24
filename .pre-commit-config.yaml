@@ -3,16 +3,24 @@ repos:
       rev: v3.0.3
       hooks:
           - id: prettier
+            language: node
             additional_dependencies:
                 - prettier@^3.0.3
-                - prettier-plugin-tailwindcss@^0.5.3
-                - '@trivago/prettier-plugin-sort-imports@^4.2.0'
+                - prettier-plugin-tailwindcss@^0.7.0
+                - '@trivago/prettier-plugin-sort-imports@^6.0.0'
+
     - repo: https://github.com/pre-commit/mirrors-eslint
-      rev: v8.49.0
+      rev: v9.15.0
       hooks:
           - id: eslint
+            language: node
             additional_dependencies:
-                - eslint@^8.49.0
-                - eslint-config-next@^13.4.19
-                - '@typescript-eslint/eslint-plugin@^6.7.0'
-                - '@typescript-eslint/parser@^6.7.0'
+                - '@eslint/js@^9.15.0'
+                - '@next/eslint-plugin-next@^16.0.0'
+                - eslint@^9.15.0
+                - eslint-import-resolver-typescript@^4.0.0
+                - eslint-plugin-import@^2.31.0
+                - eslint-plugin-jsx-a11y@^6.10.2
+                - eslint-plugin-react@^7.37.2
+                - eslint-plugin-react-hooks@^7.0.0
+                - typescript-eslint@^8.16.0
