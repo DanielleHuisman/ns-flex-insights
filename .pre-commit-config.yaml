@@ -6,7 +6,7 @@ repos:
             language: node
             additional_dependencies:
                 - prettier@^3.0.3
-                - prettier-plugin-tailwindcss@^0.7.0
+                - prettier-plugin-tailwindcss@^0.8.0
                 - '@trivago/prettier-plugin-sort-imports@^6.0.0'
 
     - repo: https://github.com/pre-commit/mirrors-eslint
